@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Homemade+Apple&display=swap"';
+@import 'https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Homemade+Apple&family=Slabo+27px&display=swap"';
 
 ion-header {
   ion-toolbar {
@@ -44,5 +44,43 @@ ion-content {
       font-family: "Asap", sans-serif;
       letter-spacing: 1pt;
     }
+  }
+
+  div.nav {
+    margin-top: -65px;
+    background: linear-gradient(rgba(234, 188, 4, 0.9), rgba(234, 188, 4, 1));
+    border-bottom-left-radius: 50% 42%;
+    border-bottom-right-radius: 50% 42%;
+
+    .nav-icon {
+      font-size: 18pt;
+    }
+  }
+
+  ion-button.nav-btn {
+    height: 80px;
+  }
+
+  div.policies {
+    text-align: center;
+
+    h3.policies-title {
+      line-height: 3;
+      font-size: 1.6em;
+      font-family: "Slabo 27px", serif;
+      display: inline-block;
+    }
+  }
+
+  .note {
+    font-size: 0.8em;
+    color: #777;
+  }
+
+  div.assets-card {
+    font-family: "Slabo 27px", serif;
+    box-shadow: 1px 0px 10px #ccc;
+    border-radius: 10% 10% 0 0;
+    min-height: 150px;
   }
 }
