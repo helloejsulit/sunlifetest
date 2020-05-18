@@ -1,7 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline" color="light">
+        </ion-icon>
+        <ion-badge class="notifications-badge" color="danger">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content
+  class="ion-no-padding ion-no-margin"
+  fullscreen
+  (ionScroll)="onScroll($event)"
+  [scrollEvents]="true"
+>
+  <ion-grid class="ion-no-margin ion-no-padding">
+    <ion-row>
+      <ion-col>
+        <div class="hero">
+          <ion-avatar>
+            <img
+              src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+            />
+          </ion-avatar>
+          <h5 class="greeting-txt ion-text-center ion-no-margin">
+            Good Afternoon
+          </h5>
+          <h2 class="name-txt ion-text-center ion-no-margin">
+            Chu Ying, Rebecca
+          </h2>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

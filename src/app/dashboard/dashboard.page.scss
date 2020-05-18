@@ -1,0 +1,48 @@
+@import 'https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Homemade+Apple&display=swap"';
+
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+    --border-style: none;
+    --ion-color-base: transparent !important;
+  }
+
+  .show-background {
+    border-style: none;
+    background: #eaab00;
+  }
+
+  ion-badge.notifications-badge {
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+    font-size: 0.7em;
+  }
+}
+
+ion-content {
+  div.hero {
+    padding-top: 25px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("https://picsum.photos/200") no-repeat;
+    background-size: cover;
+    height: 250px;
+    color: #fff;
+
+    ion-avatar {
+      margin: 10px auto;
+    }
+
+    .greeting-txt {
+      font-family: "Homemade Apple", cursive;
+    }
+
+    .name-txt {
+      margin-top: 3px;
+      font-family: "Asap", sans-serif;
+      letter-spacing: 1pt;
+    }
+  }
+}
