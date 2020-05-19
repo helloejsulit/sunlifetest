@@ -1,5 +1,9 @@
 import { Injectable } from "@angular/core";
-import { Policy, PolicyServices } from "../models/policy.interface";
+import {
+  Policy,
+  PolicyServices,
+  PolicyDetails,
+} from "../models/policy.interface";
 
 @Injectable({
   providedIn: "root",
@@ -51,13 +55,105 @@ export class PolicyService {
     },
     {
       header: "Cash out your policy values",
-      icon: "document-attach-outline",
+      icon: "basket-outline",
       items: [{ title: "Value Withdrawal" }, { title: "Payout Method" }],
     },
     {
       header: "Take a loan against your policy value",
-      icon: "document-attach-outline",
+      icon: "cash-outline",
       items: [{ title: "Loans" }],
+    },
+    {
+      header: "Payment options for your premiums",
+      icon: "card-outline",
+      items: [{ title: "Premium Payment Method" }],
+    },
+  ];
+
+  details: PolicyDetails[] = [
+    {
+      title: "LifeSuper 20",
+      policyNum: 601007042,
+      status: "Inforce",
+      isDue: true,
+      details: [
+        {
+          name: "Sum Assured",
+          value: 5900000,
+        },
+        {
+          name: "Surrender Value*",
+          value: 240770,
+        },
+        {
+          name: "Modal Premium / Regular Contribution including Levy",
+          value: 3441,
+        },
+      ],
+    },
+    {
+      title: "Sun Architect",
+      policyNum: 201491780,
+      status: "Inforce",
+      isDue: false,
+      details: [
+        {
+          name: "Contribution Amount",
+          value: 11066,
+        },
+        {
+          name: "Fund Balance*",
+          value: 10539,
+        },
+        {
+          name: "Surrender Value",
+          value: 7337,
+        },
+        {
+          name: "Modal Premium / Regular Contribution including Levy",
+          value: 3441,
+        },
+      ],
+    },
+    {
+      title: "Critical Medical Care Plan II",
+      policyNum: 428267442,
+      status: "Inforce",
+      isDue: false,
+      details: [
+        {
+          name: "Amount of Benefit",
+          value: 500000,
+        },
+        {
+          name: "Modal Premium / Regular Contribution including Levy",
+          value: 3441,
+        },
+      ],
+    },
+    {
+      title: "SunEducator 5",
+      policyNum: 60158495,
+      status: "Inforce",
+      isDue: false,
+      details: [
+        {
+          name: "Amount of Benefit",
+          value: 25000,
+        },
+        {
+          name: "Cash Value*",
+          value: 2046,
+        },
+        {
+          name: "Surrender Value",
+          value: 2251,
+        },
+        {
+          name: "Modal Premium / Regular Contribution including Levy",
+          value: 3441,
+        },
+      ],
     },
   ];
 
@@ -71,5 +167,9 @@ export class PolicyService {
 
   getPolicyServicing = (): PolicyServices[] => {
     return this.services;
+  };
+
+  getPolicyDetails = (): PolicyDetails[] => {
+    return this.details;
   };
 }

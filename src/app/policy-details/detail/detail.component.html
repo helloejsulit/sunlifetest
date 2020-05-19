@@ -1,0 +1,58 @@
+<div class="policy-box">
+  <ion-card class="policy-card">
+    <ion-grid class="ion-no-margin ion-no-padding">
+      <ion-row>
+        <ion-col size="6">
+          <div class="policy-header">
+            <ion-card-header class="ion-no-padding">
+              <ion-card-title class="policy-title">
+                {{ detail.title }}
+              </ion-card-title>
+              <p class="policy-num ion-no-margin">
+                Policy No: {{ detail.policyNum }}
+              </p>
+              <p class="policy-status ion-no-margin">
+                Status: {{ detail.status }}
+              </p>
+            </ion-card-header>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="policy-icon ion-text-right">
+            <ion-icon size="large" name="chevron-forward-outline"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card-content class="ion-no-padding">
+      <div class="policy-content">
+        <ion-grid class="ion-no-margin ion-no-padding">
+          <ion-row>
+            <ng-container *ngFor="let d of detail.details">
+              <ion-col size="5">
+                <p>{{ d.name }}</p>
+              </ion-col>
+              <ion-col size="7">
+                <p class="item-right ion-text-right">
+                  {{ d.value | currency: "HKD" }}
+                </p>
+              </ion-col>
+            </ng-container>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div class="notice" *ngIf="detail.isDue">
+        <ion-item lines="false" class="ion-no-margin ion-no-padding">
+          <ion-icon
+            class="notice-icon ion-no-margin"
+            name="alert-outline"
+            slot="start"
+          ></ion-icon>
+          <ion-label class="ion-text-wrap ion-no-margin notice-text">
+            Premium of HKD 1,280.90 due in 3 days
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>

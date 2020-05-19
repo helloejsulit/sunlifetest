@@ -1,9 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>policy-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dashboard" text="Back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>All Policies</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-detail
+          *ngFor="let detail of policyDetails"
+          [detail]="detail"
+        ></app-detail>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

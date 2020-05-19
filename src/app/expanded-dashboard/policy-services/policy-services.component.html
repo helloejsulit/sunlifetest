@@ -1,7 +1,9 @@
 <div class="policy-list">
   <ion-list lines="none">
     <ng-container *ngFor="let policyService of policyServices">
-      <ion-item-divider class="header-divider ion-margin-top">
+      <ion-item-divider
+        class="header-divider ion-margin-top ion-margin-start ion-margin-end"
+      >
         <ion-icon
           slot="start"
           [name]="policyService.icon"

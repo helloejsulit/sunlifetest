@@ -12,7 +12,5 @@ export class AssetComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.asset);
-  }
+  ngOnInit() {}
 }

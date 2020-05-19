@@ -18,7 +18,5 @@ export class PolicyServicesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.policyServices);
-  }
+  ngOnInit() {}
 }

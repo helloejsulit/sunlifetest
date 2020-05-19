@@ -13,6 +13,19 @@ export interface PolicyServices {
   items: Services[];
 }
 
-export interface Services {
+interface Services {
   title: string;
+}
+
+export interface PolicyDetails {
+  title: string;
+  policyNum: number;
+  status: string;
+  isDue: boolean;
+  details: Details[];
+}
+
+interface Details {
+  name: string;
+  value: number;
 }
