@@ -22,6 +22,11 @@ ion-header {
   }
 }
 
+ion-item.asset-item {
+  --detail-icon-color: #000;
+  --detail-icon-size: 20pt;
+}
+
 ion-content {
   div.hero {
     padding-top: 25px;
@@ -65,22 +70,70 @@ ion-content {
     text-align: center;
 
     h3.policies-title {
-      line-height: 3;
       font-size: 1.6em;
       font-family: "Slabo 27px", serif;
       display: inline-block;
     }
   }
 
-  .note {
-    font-size: 0.8em;
-    color: #777;
+  div.policy-icons {
+    ion-icon.policy-icon {
+      background: red;
+      border-radius: 100%;
+      padding: 12px;
+      font-size: 20pt;
+    }
+
+    h5.policy-title {
+      margin: 5px;
+    }
+
+    p.policy-desc {
+      font-size: 10pt;
+    }
+  }
+
+  ion-row.note-row {
+    padding: 10px;
+
+    .note {
+      font-size: 0.8em;
+      color: #777;
+    }
   }
 
   div.assets-card {
-    font-family: "Slabo 27px", serif;
     box-shadow: 1px 0px 10px #ccc;
     border-radius: 10% 10% 0 0;
     min-height: 150px;
+    padding: 0 15px;
+
+    ion-row.assets-header {
+      border-bottom: 1px solid #d4d4d4;
+
+      h2 {
+        font-family: "Slabo 27px", serif;
+      }
+    }
+  }
+
+  div.asset-box {
+    p {
+      line-height: 2;
+    }
+    span {
+      margin-right: 15px;
+    }
+  }
+
+  div.assets-list {
+    ion-label {
+      font-size: 0.9em;
+      display: inline-block;
+    }
+    ion-label.assets-value {
+      font-weight: bold;
+      margin-left: 25px;
+    }
   }
 }
