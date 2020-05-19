@@ -3,6 +3,13 @@ ion-label {
   display: inline-block;
 }
 ion-label.assets-value {
+  font-size: 0.8em;
   font-weight: bold;
   margin-left: 25px;
+}
+
+ion-item.asset-item {
+  --inner-padding-start: 0;
+  --inner-padding-end: 0;
+  --detail-icon-color: #000000;
 }
