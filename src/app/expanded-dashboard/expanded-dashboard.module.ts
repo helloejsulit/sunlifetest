@@ -10,6 +10,8 @@ import { ExpandedDashboardPage } from "./expanded-dashboard.page";
 import { UserHeroComponent } from "../dashboard/user-hero/user-hero.component";
 import { NavComponent } from "../dashboard/nav/nav.component";
 import { NavItemComponent } from "../dashboard/nav/nav-item/nav-item.component";
+import { PolicyServicesComponent } from "./policy-services/policy-services.component";
+import { ServicesComponent } from "./policy-services/services/services.component";
 
 @NgModule({
   imports: [
@@ -23,6 +25,8 @@ import { NavItemComponent } from "../dashboard/nav/nav-item/nav-item.component";
     UserHeroComponent,
     NavComponent,
     NavItemComponent,
+    PolicyServicesComponent,
+    ServicesComponent,
   ],
 })
 export class ExpandedDashboardPageModule {}

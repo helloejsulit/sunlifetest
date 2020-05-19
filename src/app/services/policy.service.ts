@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Policy } from "../models/policy.interface";
+import { Policy, PolicyServices } from "../models/policy.interface";
 
 @Injectable({
   providedIn: "root",
@@ -40,11 +40,36 @@ export class PolicyService {
     },
   ];
 
+  services: PolicyServices[] = [
+    {
+      header: "Move value from one policy to another",
+      icon: "document-attach-outline",
+      items: [
+        { title: "Pay with Policy Value" },
+        { title: "Standing Instructions" },
+      ],
+    },
+    {
+      header: "Cash out your policy values",
+      icon: "document-attach-outline",
+      items: [{ title: "Value Withdrawal" }, { title: "Payout Method" }],
+    },
+    {
+      header: "Take a loan against your policy value",
+      icon: "document-attach-outline",
+      items: [{ title: "Loans" }],
+    },
+  ];
+
   constructor() {}
 
   getUserPolicies = (userId: number): Policy[] => {
     if (userId === 1) {
       return this.policies;
     }
+  };
+
+  getPolicyServicing = (): PolicyServices[] => {
+    return this.services;
   };
 }

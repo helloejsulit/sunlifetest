@@ -6,3 +6,13 @@ export interface Policy {
     bgcolor: string;
   };
 }
+
+export interface PolicyServices {
+  header: string;
+  icon: string;
+  items: Services[];
+}
+
+export interface Services {
+  title: string;
+}

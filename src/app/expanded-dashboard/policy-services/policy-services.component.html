@@ -1,0 +1,24 @@
+<div class="policy-list">
+  <ion-list lines="none">
+    <ng-container *ngFor="let policyService of policyServices">
+      <ion-item-divider class="header-divider ion-margin-top">
+        <ion-icon
+          slot="start"
+          [name]="policyService.icon"
+          class="list-icon"
+        ></ion-icon>
+        <ion-label class="list-header">
+          {{ policyService.header }}
+        </ion-label>
+      </ion-item-divider>
+
+      <ng-container *ngFor="let services of policyService.items">
+        <ion-item lines="none" detail="true" class="ion-margin-end">
+          <ion-label class="policy-title">{{ services.title }}</ion-label>
+        </ion-item>
+      </ng-container>
+
+      <ion-item-divider class="bottom-divider"> </ion-item-divider>
+    </ng-container>
+  </ion-list>
+</div>
