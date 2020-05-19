@@ -1,0 +1,21 @@
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+    --border-style: none;
+    --ion-color-base: transparent !important;
+  }
+
+  .show-background {
+    border-style: none;
+    background: #eaab00;
+  }
+
+  ion-badge.notifications-badge {
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+    font-size: 0.7em;
+  }
+}

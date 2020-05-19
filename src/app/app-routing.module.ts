@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { UserResolver } from "./services/user.resolver";
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       import("./expanded-dashboard/expanded-dashboard.module").then(
         (m) => m.ExpandedDashboardPageModule
       ),
+    resolve: { user: UserResolver },
   },
   {
     path: "policy-details",

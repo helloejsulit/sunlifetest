@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>expanded-dashboard</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline" color="light">
+        </ion-icon>
+        <ion-badge class="notifications-badge" color="danger">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content
+  class="ion-no-padding ion-no-margin"
+  fullscreen
+  (ionScroll)="onScroll($event)"
+  [scrollEvents]="true"
+>
+  <ion-grid class="ion-no-margin ion-no-padding">
+    <ion-row>
+      <ion-col>
+        <app-user-hero [user]="currentUser"></app-user-hero>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-nav></app-nav>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

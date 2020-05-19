@@ -2,7 +2,7 @@
   <ion-grid class="ion-padding-vertical">
     <ion-row>
       <ion-col size="4">
-        <app-nav-item>
+        <app-nav-item [link]="'/manage'">
           <ion-icon class="nav-icon" name="cash-outline"></ion-icon>
           <br />
           <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">
@@ -11,7 +11,7 @@
         </app-nav-item>
       </ion-col>
       <ion-col size="4" class="ion-margin-top">
-        <app-nav-item>
+        <app-nav-item [link]="'/claims'">
           <ion-icon class="nav-icon" name="receipt-outline"></ion-icon>
           <br />
           <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">
@@ -20,7 +20,7 @@
         </app-nav-item>
       </ion-col>
       <ion-col size="4">
-        <app-nav-item (click)="goToPage('expanded-dashboard')">
+        <app-nav-item [link]="'/expanded-dashboard'">
           <ion-icon class="nav-icon" name="document-text-outline"></ion-icon>
           <br />
           <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">

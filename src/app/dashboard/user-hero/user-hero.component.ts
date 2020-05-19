@@ -5,6 +5,7 @@ import {
   ChangeDetectionStrategy,
 } from "@angular/core";
 import { User } from "src/app/models/user.interface";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-user-hero",
@@ -16,11 +17,15 @@ export class UserHeroComponent implements OnInit {
   @Input()
   user: User;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   imageError = ($event) => {
     $event.srcElement.src = "http://via.placeholder.com/640x360";
+  };
+
+  goToDashboard = () => {
+    this.router.navigate(["dashboard"]);
   };
 }
