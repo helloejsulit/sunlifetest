@@ -1,0 +1,21 @@
+div.nav {
+  margin-top: -65px;
+  // background: linear-gradient(rgba(234, 188, 4, 0.9), rgba(234, 188, 4, 1));
+  background: rgba(234, 188, 4, 1);
+  border-bottom-left-radius: 50% 35%;
+  border-bottom-right-radius: 50% 35%;
+
+  .nav-icon {
+    font-size: 18pt;
+  }
+
+  .nav-btn {
+    height: 80px;
+  }
+
+  .nav-title {
+    width: 90px;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+}

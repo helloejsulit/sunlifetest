@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ScrollDetail } from "@ionic/core";
+import { UserService } from "../services/user.service";
+import { User } from "../models/user.interface";
+import { Policy } from "../models/policy.interface";
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.page.html",
@@ -7,10 +10,14 @@ import { ScrollDetail } from "@ionic/core";
 })
 export class DashboardPage implements OnInit {
   showToolbar: boolean;
+  currentUser: User;
+  userPolicies: Policy[];
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.currentUser = this.userService.currentUser;
+  }
 
   onScroll = ($event: CustomEvent<ScrollDetail>) => {
     if ($event && $event.detail && $event.detail.scrollTop) {

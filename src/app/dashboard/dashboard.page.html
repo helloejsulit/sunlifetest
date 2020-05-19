@@ -24,194 +24,29 @@
   <ion-grid class="ion-no-margin ion-no-padding">
     <ion-row>
       <ion-col>
-        <div class="hero">
-          <ion-avatar>
-            <!-- <img src="http://via.placeholder.com/640x360" /> -->
-            <img
-              src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
-            />
-          </ion-avatar>
-          <h5 class="greeting-txt ion-text-center ion-no-margin">
-            Good Afternoon
-          </h5>
-          <h2 class="name-txt ion-text-center ion-no-margin">
-            Chu Ying, Rebecca
-          </h2>
-        </div>
+        <app-user-hero [user]="currentUser"></app-user-hero>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="nav">
-          <ion-grid class="ion-padding-vertical">
-            <ion-row>
-              <ion-col size="4">
-                <ion-button
-                  shape="round"
-                  expand="block"
-                  fill="clear"
-                  class="nav-btn"
-                  color="dark"
-                >
-                  <div>
-                    <ion-icon class="nav-icon" name="cash-outline"></ion-icon>
-                    <br />
-                    <p class="ion-text-wrap ion-text-capitalize ion-no-margin">
-                      Manage ILAS Funds
-                    </p>
-                  </div>
-                </ion-button>
-              </ion-col>
-              <ion-col size="4">
-                <ion-button
-                  shape="round"
-                  expand="block"
-                  fill="clear"
-                  class="nav-btn ion-margin-top"
-                  color="dark"
-                >
-                  <div>
-                    <ion-icon
-                      class="nav-icon"
-                      name="receipt-outline"
-                    ></ion-icon>
-                    <br />
-                    <p class="ion-text-wrap ion-text-capitalize ion-no-margin">
-                      Claims
-                    </p>
-                  </div>
-                </ion-button>
-              </ion-col>
-              <ion-col size="4">
-                <ion-button
-                  shape="round"
-                  expand="block"
-                  fill="clear"
-                  class="nav-btn"
-                  color="dark"
-                >
-                  <div>
-                    <ion-icon
-                      class="nav-icon"
-                      name="document-text-outline"
-                    ></ion-icon>
-                    <br />
-                    <p class="ion-text-wrap ion-text-capitalize ion-no-margin">
-                      Policy Servicing
-                    </p>
-                  </div>
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </div>
+        <app-nav></app-nav>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="policies">
-          <h3 class="ion-text-center ion-margin-top policies-title">
-            Coverage from 4 Policies
-          </h3>
-          <ion-icon
-            class="policies-chevron"
-            name="chevron-forward-outline"
-          ></ion-icon>
-        </div>
+        <app-policies [policies]="currentUser.policies"></app-policies>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <div class="policies-icons">
-          <ion-grid>
-            <ion-row>
-              <ion-col size="6" class="ion-padding">
-                <div class="policy-icons ion-text-center">
-                  <ion-icon class="policy-icon" name="add"></ion-icon>
-                  <h5 class="ion-no-margin policy-title">Life</h5>
-                  <p class="ion-no-margin policy-desc">HKD 6,146,066</p>
-                </div>
-              </ion-col>
-              <ion-col size="6" class="ion-padding">
-                <div class="policy-icons ion-text-center">
-                  <ion-icon class="policy-icon" name="add"></ion-icon>
-                  <h5 class="ion-no-margin policy-title">Critical Illness</h5>
-                  <p class="ion-no-margin policy-desc">up to HKD 6,146,066</p>
-                </div>
-              </ion-col>
-              <ion-col size="6" class="ion-padding">
-                <div class="policy-icons ion-text-center">
-                  <ion-icon class="policy-icon" name="add"></ion-icon>
-                  <h5 class="ion-no-margin policy-title">Medical & Hosp.</h5>
-                  <p class="ion-no-margin policy-desc">
-                    up to HKD 6,146,066/year, HKD 600,000/disability
-                  </p>
-                </div>
-              </ion-col>
-              <ion-col size="6" class="ion-padding">
-                <div class="policy-icons ion-text-center">
-                  <ion-icon class="policy-icon" name="add"></ion-icon>
-                  <h5 class="ion-no-margin policy-title">Accident</h5>
-                  <p class="ion-no-margin policy-desc">up to HKD 6,146,066</p>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row class="note-row">
       <ion-col class="ion-padding">
-        <div class="note ion-text-center ion-margin-top">
-          <ion-label>
-            *Additional coverages detailed in provision
-          </ion-label>
-        </div>
+        <app-note>
+          *Additional coverages detailed in provision
+        </app-note>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="assets-card">
-          <ion-grid>
-            <ion-row class="assets-header">
-              <ion-col size="6">
-                <h2>Assets</h2>
-              </ion-col>
-              <ion-col size="6">
-                <div class="asset-box">
-                  <p class="ion-text-right">
-                    <span>Total</span>
-                    <strong> HKD 255,309 </strong>
-                  </p>
-                </div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div class="assets-list">
-                  <ion-list lines="none">
-                    <ion-item detail="true" class="asset-item ion-no-margin">
-                      <ion-label class="assets-detail ion-text-left">
-                        Investment-Linked
-                      </ion-label>
-                      <ion-label class="assets-value ion-text-right">
-                        HKD 10,539
-                      </ion-label>
-                    </ion-item>
-                    <ion-item detail="true" class="asset-item ion-no-margin">
-                      <ion-label class="assets-detail ion-text-left">
-                        Savings
-                      </ion-label>
-                      <ion-label class="assets-value ion-text-right">
-                        HKD 161,688
-                      </ion-label>
-                    </ion-item>
-                  </ion-list>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </div>
+        <app-assets-list [assets]="currentUser.assets"></app-assets-list>
       </ion-col>
     </ion-row>
   </ion-grid>

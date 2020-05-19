@@ -1,0 +1,15 @@
+<div class="policies" (click)="goToPage('policy-details')">
+  <h3 class="ion-text-center ion-margin-top policies-title">
+    Coverage from {{ policies.length }} Policies
+  </h3>
+  <ion-icon class="policies-chevron" name="chevron-forward-outline"></ion-icon>
+</div>
+<div class="policies-icons">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" class="ion-padding" *ngFor="let policy of policies">
+        <app-policy [policy]="policy"></app-policy>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

@@ -1,0 +1,22 @@
+div.hero {
+  padding-top: 25px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://picsum.photos/200") no-repeat;
+  background-size: cover;
+  height: 250px;
+  color: #fff;
+
+  ion-avatar {
+    margin: 10px auto;
+  }
+
+  .greeting-txt {
+    font-family: "Homemade Apple", cursive;
+  }
+
+  .name-txt {
+    margin-top: 3px;
+    font-family: "Asap", sans-serif;
+    letter-spacing: 1pt;
+  }
+}

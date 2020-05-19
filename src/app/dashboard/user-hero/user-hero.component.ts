@@ -1,0 +1,26 @@
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
+import { User } from "src/app/models/user.interface";
+
+@Component({
+  selector: "app-user-hero",
+  templateUrl: "./user-hero.component.html",
+  styleUrls: ["./user-hero.component.scss"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class UserHeroComponent implements OnInit {
+  @Input()
+  user: User;
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  imageError = ($event) => {
+    $event.srcElement.src = "http://via.placeholder.com/640x360";
+  };
+}

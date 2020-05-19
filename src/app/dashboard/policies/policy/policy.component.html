@@ -1,0 +1,9 @@
+<div class="policy-icons ion-text-center">
+  <ion-icon
+    class="policy-icon"
+    [name]="policy.icon.name"
+    [ngStyle]="{ background: policy.icon.bgcolor }"
+  ></ion-icon>
+  <h5 class="ion-no-margin policy-title">{{ policy.title }}</h5>
+  <p class="ion-no-margin policy-desc">{{ policy.details }}</p>
+</div>

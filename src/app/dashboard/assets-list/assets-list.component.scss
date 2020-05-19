@@ -1,0 +1,23 @@
+div.assets-card {
+  box-shadow: 1px 0px 10px #ccc;
+  border-radius: 10% 10% 0 0;
+  min-height: 150px;
+  padding: 0 15px;
+
+  ion-row.assets-header {
+    border-bottom: 1px solid #d4d4d4;
+
+    h2 {
+      font-family: "Slabo 27px", serif;
+    }
+  }
+}
+
+div.asset-box {
+  p {
+    line-height: 2;
+  }
+  span {
+    margin-right: 15px;
+  }
+}

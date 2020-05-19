@@ -1,0 +1,33 @@
+<div class="nav">
+  <ion-grid class="ion-padding-vertical">
+    <ion-row>
+      <ion-col size="4">
+        <app-nav-item>
+          <ion-icon class="nav-icon" name="cash-outline"></ion-icon>
+          <br />
+          <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">
+            Manage ILAS Funds
+          </p>
+        </app-nav-item>
+      </ion-col>
+      <ion-col size="4" class="ion-margin-top">
+        <app-nav-item>
+          <ion-icon class="nav-icon" name="receipt-outline"></ion-icon>
+          <br />
+          <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">
+            Claims
+          </p>
+        </app-nav-item>
+      </ion-col>
+      <ion-col size="4">
+        <app-nav-item (click)="goToPage('expanded-dashboard')">
+          <ion-icon class="nav-icon" name="document-text-outline"></ion-icon>
+          <br />
+          <p class="nav-title ion-text-wrap ion-text-capitalize ion-no-margin">
+            Policy Servicing
+          </p>
+        </app-nav-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

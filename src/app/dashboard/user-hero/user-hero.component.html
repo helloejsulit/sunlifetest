@@ -1,0 +1,12 @@
+<div class="hero">
+  <ion-avatar>
+    <!-- <img src="http://via.placeholder.com/640x360" /> -->
+    <ion-img (ionError)="imageError($event)" [src]="user.avatar"></ion-img>
+  </ion-avatar>
+  <h5 class="greeting-txt ion-text-center ion-no-margin">
+    Good Afternoon
+  </h5>
+  <h2 class="name-txt ion-text-center ion-no-margin">
+    {{ user.name }}
+  </h2>
+</div>

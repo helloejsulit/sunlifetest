@@ -1,0 +1,29 @@
+<div class="assets-card">
+  <ion-grid>
+    <ion-row class="assets-header">
+      <ion-col size="6">
+        <h2>Assets</h2>
+      </ion-col>
+      <ion-col size="6">
+        <div class="asset-box">
+          <p class="ion-text-right">
+            <span>Total</span>
+            <strong> {{ assets.total | currency: "HKD" }} </strong>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="assets-list">
+          <ion-list lines="none">
+            <app-asset
+              [asset]="asset"
+              *ngFor="let asset of assets.list"
+            ></app-asset>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
